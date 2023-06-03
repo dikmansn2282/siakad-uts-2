@@ -2,10 +2,10 @@ create database siakad;
  
 use siakad;
  
-CREATE TABLE `matakuliah` (
+CREATE TABLE `dosen` (
   `id` int(11) NOT NULL auto_increment,
   `nama` varchar(255),
-  `kode_matakuliah` char(5),
-  `deskripsi` varchar(15),
+  `nidn` char(8),
+  `jenjang_pendidikan` enum("S2","S3"),
   PRIMARY KEY  (`id`)
 );
