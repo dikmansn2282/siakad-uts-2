@@ -1,0 +1,11 @@
+create database siakad;
+ 
+use siakad;
+ 
+CREATE TABLE `matakuliah` (
+  `id` int(11) NOT NULL auto_increment,
+  `nama` varchar(255),
+  `kode_matakuliah` char(5),
+  `deskripsi` varchar(15),
+  PRIMARY KEY  (`id`)
+);
