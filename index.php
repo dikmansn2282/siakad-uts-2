@@ -20,7 +20,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM dosen ORDER BY id DESC");
         <tr>
             <th>Nama</th>
             <th>NIDN</th>
-            <th>JENJANG PENDIDIKAN</th>
+            <th>JENJANG PENDIDIKAN (S2 ATAU S3)</th>
             <th>Update</th>
         </tr>
         <?php

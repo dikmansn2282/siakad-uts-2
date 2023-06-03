@@ -6,8 +6,8 @@ include_once("config.php");
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
     $nama = $_POST['nama'];
-    $kode_matakuliah = $_POST['nidn'];
-    $deskripsi = $_POST['jenjang_pendidikan'];
+    $nidn = $_POST['nidn'];
+    $jenjang_pendidikan = $_POST['jenjang_pendidikan'];
 
     // update user data
     $result = mysqli_query($mysqli, "UPDATE dosen SET nama='$nama',nidn='$nidn',jenjang_pendidikan='$jenjang_pendidikan' WHERE id=$id");
@@ -27,7 +27,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM dosen WHERE id=$id");
 while ($user_data = mysqli_fetch_array($result)) {
     $nama = $user_data['nama'];
     $nidn = $user_data['nidn'];
-    $jenajang_pendidikan = $user_data['jenajang_pendidikan'];
+    $jenjang_pendidikan = $user_data['jenjang_pendidikan'];
 }
 ?>
 <html>
@@ -47,12 +47,12 @@ while ($user_data = mysqli_fetch_array($result)) {
                 <td><input type="text" name="nama" value=<?php echo $nama; ?>></td>
             </tr>
             <tr>
-                <td>Kode Matakuliah</td>
+                <td>NIDN</td>
                 <td><input type="text" name="nidn" value=<?php echo $nidn; ?>></td>
             </tr>
             <tr>
-                <td>Deskripsi</td>
-                <td><input type="text" name="jenajang_pendidikan" value=<?php echo $jenajang_pendidikan; ?>></td>
+                <td>Jenjang Pendidikan</td>
+                <td><input type="text" name="jenjang_pendidikan" value=<?php echo $jenjang_pendidikan; ?>></td>
             </tr>
             <tr>
                 <td><input type="hidden" name="id" value=<?php echo $_GET['id']; ?>></td>
