@@ -9,7 +9,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM dosen ORDER BY id DESC");
 <html>
 
 <head>
-    <title>Dosen</title>
+    <title>Data Dosen</title>
 </head>
 
 <body>
